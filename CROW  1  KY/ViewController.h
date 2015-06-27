@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
-
+{
+    IBOutlet UILabel *Label1;
+    IBOutlet UIButton *BUtun1;
+    
+}
+-(IBAction)AB;
+-(IBAction)BB;
 @end
 

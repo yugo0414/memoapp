@@ -16,6 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    BUtun1.hidden=YES;
+    
+    
+    
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,4 +30,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)AB{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)BB{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+        
+    
+}
 @end
