@@ -11,6 +11,14 @@
 
 @interface ViewController4 : UIViewController{
     IBOutlet UITextView *textView;
+    NSMutableArray *memos;
+    NSMutableArray *xArray;
+    NSMutableArray *yArray;
+    NSMutableArray *cArray;
+    NSUserDefaults *saveData;
+    
+    
+    
 }
 -(IBAction)tapReturn;
 

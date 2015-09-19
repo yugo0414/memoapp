@@ -9,29 +9,41 @@
 #import <UIKit/UIKit.h>
 #import "ViewController4.h"
 
-@interface ViewController5 : UIViewController<ViewController4Delegate>{
+@interface ViewController5 : UIViewController {
    
    
-    IBOutlet UIView * box;
-    IBOutlet UIScrollView *sv;
+  //  IBOutlet UIView * box;
+    IBOutlet UIScrollView *scrollView;
     IBOutlet UIView*menuView;
     int colorNumber;
     BOOL isMenuShow;
+    BOOL isEdit;
     IBOutlet UIView *aView;
     int count;
     //タップした時の座標を保存する
     CGFloat x;
     CGFloat y;
+    CGFloat c;
+    NSString *t;
+    NSMutableArray *xArray;
+    NSMutableArray *yArray;
+    NSMutableArray *cArray;
+    NSUserDefaults*saveData;
+     NSMutableArray *memos;
+    NSData *data;
 
     
-    UITextView *boxTextField[50];
+    UITextView *boxTextLabelArray[50];
 }
--(IBAction)mode1;
--(IBAction)mode2;
+
 -(IBAction)colorgreen;
--(IBAction)colorblue;
+-(IBAction)colororange;
 -(IBAction)colorred;
 -(IBAction)colorpupre;
+
+-(IBAction)deleteButton;
+
+-(IBAction)save;
 
 
 

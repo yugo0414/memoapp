@@ -19,7 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    saveData = [NSUserDefaults standardUserDefaults];
+    
+    if ([saveData arrayForKey:@"memoskey"] == nil ) {
+        memos =  [[NSMutableArray alloc] init];
+    } else {
+        memos = [[saveData arrayForKey:@"memoskey"] mutableCopy];
+    }
+
 }
+   
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -36,7 +45,13 @@
 }
 */
 -(IBAction)tapReturn;{
-    [self.delegate send:textView.text];
+   // [self.delegate send:textView.text];
+    [memos addObject: textView.text];
+    
+//    [saveData setObject: textView.text forKey:@"KEY_T"];
+    
+    [saveData setObject:memos forKey:@"memoskey"];
+
     [self dismissViewControllerAnimated:YES completion:nil];
      
 }
